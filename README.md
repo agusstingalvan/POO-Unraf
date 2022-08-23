@@ -10,6 +10,7 @@ Clase JUGADOR
   * recolectarArma(ARMA)
   * atacar(ENEMIGO, ARMA)
   * evento recursivo que descuente tiempo
+  - get de la lista de armas
 
 Clase ENEMIGO
 * Propiedades
@@ -23,3 +24,5 @@ Clase ARMA
   * poder
   * esManual [si o no]
   * balas (si es manual no aplica / cartuchos ? / Dividir clase ?) 
+- durabilidad
+- estado
