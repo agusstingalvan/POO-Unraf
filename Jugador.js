@@ -18,6 +18,20 @@ class Jugador {
     getArmaEquipada() {
         return this.armaEquipada
     }
+    getArmasManuales(){
+        return this.armas.filter(arma => arma.tipo === 'manual')
+    }
+    getArmasFuego(){
+        return this.armas.filter(arma => arma.tipo === 'fuego')
+    }
+    getMejorArma(){
+        let numeroMayor = 0;
+        let mejorArma;
+        for(let arma of this.armas){
+            if(arma.poder > numeroMayor) mejorArma = arma
+        }
+        return mejorArma
+    }
     getVida() {
         return this.vida;
     }
@@ -29,7 +43,7 @@ class Jugador {
         return this.armaEquipada = this.armas[index];
     }
     cambiarArma() {
-        const numRandom = Math.floor(Math.random() * this.armas.length);
+        const numRandom = Math.floor(Math.random() * this.getArmas().length);
         this.equiparArma(numRandom)
     }
     atacar(enemigo, arma) {

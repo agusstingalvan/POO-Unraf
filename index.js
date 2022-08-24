@@ -38,8 +38,14 @@ while (contador < cantidadEnemigos) {
 }
 console.table(enemigos)
 
-
-
+console.log("%cLista de armas", "color: red; font-size: 24px")
+console.table(jugador.getArmas())
+console.log("%cArmas manuales", "color: orange; font-size: 24px")
+console.table(jugador.getArmasManuales())
+console.log("%cArmas de fuego", "color: blue; font-size: 24px")
+console.table(jugador.getArmasFuego())
+console.log("%cMejor arma", "color: orange; font-size: 28px")
+console.table(jugador.getMejorArma())
 while (enemigos.length > 0 && jugador.estaVivo) {
     const enemigo = enemigos.shift();
     while (enemigo.vida > 0 && jugador.estaVivo) {
